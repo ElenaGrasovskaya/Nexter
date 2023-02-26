@@ -8,12 +8,45 @@
     justify-content: center;
     grid-row-gap: 5rem;
 
+    h3 {
+        text-align: center;
+    }
+
+    @media only screen and (max-width: $bp-medium) {
+        grid-column: 1/-1;
+ 
+              
+    }
+
     &__list {
         display: grid; 
         grid-template-columns: min-content max-content;
         grid-column-gap: 2rem;
         grid-row-gap: 5vh;
         align-items: center;
+
+
+    }
+    &__list-general {
+        display: grid; 
+        grid-column-gap: 2rem;
+        grid-row-gap: 5vh;
+        align-items: center;
+
+        
+        @media only screen and (max-width: $bp-medium) {
+            grid-template-columns: repeat(3, 1fr);
+            align-items: center;
+        }
+
+        @media only screen and (max-width: $bp-small) {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+        }
+
+        
 
     }
 
@@ -33,3 +66,4 @@
 
     }
 }
+
